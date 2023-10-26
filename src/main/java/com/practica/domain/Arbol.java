@@ -25,6 +25,7 @@ public class Arbol implements Serializable{
     private String nombreComun;
     private long altura;
     private String tipoFlor;
+    private boolean peligro;
     
 
     public Arbol() {
