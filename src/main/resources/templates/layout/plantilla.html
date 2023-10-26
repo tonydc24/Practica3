@@ -4,11 +4,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
     <head th:fragment="head">
-        <title>TechShop</title>
+        <title>Arbol</title>
         <meta charset="UTF-8"/>
         <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
         <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
-       
+        <link href="/static/css/estilos.css" rel="stylesheet" type="text/css"/>
         <script th:src="@{/rutinas/rutina.js}"></script>
         <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
         <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
@@ -18,22 +18,14 @@
         <header th:fragment="header" class="header">
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
                 <div class="container">
-                    <a th:href="@{/}" class="navbar-brand">[[#{aplicacion.titulo}]]</a>
+                    <a th:href="@{/}" class="navbar-brand">Practica</a>
                     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <ul class="navbar-nav">
-                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/arbol/listado}">[[#{plantilla.arbols}]]</a></li>
-                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li>
-                             <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>
-                        </ul>
-                        <div class="col-md-3">
-                            <ul class="navbar-nav">
-                                <li class="nav-item px-2"><a class="nav-link" th:href="@{/(lang=es)}">ES</a></li>
-                                <li class="nav-item px-2"><a class="nav-link" th:href="@{/(lang=en)}">EN</a></li>
-                            </ul>
-                        </div>
+                                <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/arbol/listado}">Arboles</a></li>
+                            </ul> 
                     </div>
                 </div>   
             </nav>
@@ -41,7 +33,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-6">
-                            <h1><i class="bi bi-tree-fill"></i>[[#{plantilla.suTienda}]]</h1>
+                            <h1><i class="fa fa-tree"></i> <span class="separator">Arboles</span></h1>
+
                         </div>
                     </div>
                 </div>
@@ -51,7 +44,7 @@
             <div class="container">
                 <div class="col">
                     <p class="lead text-center">
-                        &COPY[[#{plantilla.derechos}]]
+                        &COPY Reservado
                     </p>
                 </div>
             </div>

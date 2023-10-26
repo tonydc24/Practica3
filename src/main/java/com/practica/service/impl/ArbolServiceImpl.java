@@ -16,9 +16,9 @@ public class ArbolServiceImpl implements ArbolService {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Arbol> getArbols(boolean peligros) {
+    public List<Arbol> getArbols(boolean activos) {
         var lista = arbolDao.findAll();
-        if (peligros) {
+        if (activos) {
             lista.removeIf(e -> !e.isPeligro());
         }
         return lista;

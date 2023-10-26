@@ -31,11 +31,15 @@ public class Arbol implements Serializable{
     public Arbol() {
     }
 
-    public Arbol(String nombreComun, long altura, String tipoFlor) {
+    public Arbol(String nombreComun, long altura, String tipoFlor, boolean peligro) {
         this.nombreComun = nombreComun;
         this.altura = altura;
         this.tipoFlor = tipoFlor;
+        this.peligro = peligro;
     }
+    
+
+    
 
     
     
